@@ -312,5 +312,238 @@ to{
 filter:drop-shadow(0 0 40px red);
 
 }
+  /* ========= BUTTON ========= */
+
+#loveBtn{
+
+margin-top:50px;
+
+padding:18px 45px;
+
+font-size:22px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+color:white;
+
+background:linear-gradient(45deg,#ff006a,#ff4da6);
+
+box-shadow:0 0 30px #ff2d75;
+
+transition:.4s;
+
+display:none;
+
+}
+
+#loveBtn:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 60px hotpink;
+
+}
+
+/* ========= FINAL MESSAGE ========= */
+
+#finalMessage{
+
+margin-top:50px;
+
+font-size:55px;
+
+font-family:'Great Vibes',cursive;
+
+background:linear-gradient(90deg,#ff0080,#ffd700,#ff0080);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+display:none;
+
+animation:glowText 2s infinite alternate;
+
+text-align:center;
+
+}
+
+@keyframes glowText{
+
+from{
+
+filter:drop-shadow(0 0 15px deeppink);
+
+}
+
+to{
+
+filter:drop-shadow(0 0 40px gold);
+
+}
+
+}
+
+/* ========= FLOATING EMOJI ========= */
+
+.emoji{
+
+position:fixed;
+
+font-size:28px;
+
+pointer-events:none;
+
+animation:emojiFly linear forwards;
+
+z-index:999;
+
+}
+
+@keyframes emojiFly{
+
+0%{
+
+opacity:0;
+
+transform:translateY(0) scale(.5);
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translateY(-110vh) rotate(360deg) scale(1.4);
+
+}
+
+}
+
+/* ========= HEART RAIN ========= */
+
+.rainHeart{
+
+position:fixed;
+
+top:-40px;
+
+font-size:30px;
+
+animation:rain 6s linear forwards;
+
+pointer-events:none;
+
+z-index:999;
+
+}
+
+@keyframes rain{
+
+100%{
+
+transform:translateY(120vh);
+
+opacity:0;
+
+}
+
+}
+
+/* ========= RESPONSIVE ========= */
+
+@media(max-width:900px){
+
+.sideText{
+
+position:relative;
+
+right:auto;
+
+top:auto;
+
+transform:none;
+
+margin-top:40px;
+
+text-align:center;
+
+font-size:40px;
+
+}
+
+.title{
+
+font-size:28px;
+
+}
+
+.envelope{
+
+width:280px;
+
+height:190px;
+
+}
+
+.letter{
+
+width:95%;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.title{
+
+font-size:22px;
+
+padding:10px;
+
+}
+
+.letter{
+
+font-size:15px;
+
+padding:20px;
+
+}
+
+.letter p{
+
+font-size:15px;
+
+line-height:28px;
+
+}
+
+#loveBtn{
+
+font-size:18px;
+
+padding:15px 30px;
+
+}
+
+#finalMessage{
+
+font-size:35px;
+
+}
+
+}
 
 }
