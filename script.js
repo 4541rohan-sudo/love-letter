@@ -35,10 +35,6 @@ topCover.style.transform="rotateX(180deg)";
 setTimeout(()=>{
 
 letter.style.height="900px";
-
-letter.style.height="auto";
-letter.style.maxHeight="90vh";
-letter.style.overflowY="auto";
     
 },400);
 
