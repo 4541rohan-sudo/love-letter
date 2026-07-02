@@ -17,6 +17,11 @@ let opened = false;
 
 heart.onclick = ()=>{
 
+setTimeout(()=>{
+    envelope.style.transform="translateY(220px) scale(0.8)";
+    envelope.style.opacity="0";
+},1000);
+
 if(opened) return;
 
 opened=true;
