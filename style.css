@@ -295,35 +295,22 @@ SIDE TEXT
 ========================= */
 
 .side{
-
 position:fixed;
-
-right:60px;
-
-top:50%;
-
-transform:translateY(-50%);
-
+top:20px;
+left:50%;
+transform:translateX(-50%);
 display:none;
-
-z-index:1000;
-
+z-index:9999;
+text-align:center;
+width:100%;
 }
 
 .side h1{
-
-font-size:60px;
-
+font-size:55px;
 font-family:'Great Vibes',cursive;
-
 background:linear-gradient(90deg,#ff0080,#ffd700);
-
 -webkit-background-clip:text;
-
 -webkit-text-fill-color:transparent;
-
-animation:sideGlow 2s infinite alternate;
-
 }
 
 @keyframes sideGlow{
@@ -348,28 +335,16 @@ BUTTON
 
 #btn{
 
+#btn{
 display:none;
-
-margin-top:35px;
-
+margin-top:20px;
 padding:18px 40px;
-
 font-size:20px;
-
 border:none;
-
 border-radius:50px;
-
 background:linear-gradient(45deg,#ff0066,#ff5ca8);
-
-color:white;
-
+color:#fff;
 cursor:pointer;
-
-box-shadow:0 0 30px hotpink;
-
-transition:.4s;
-
 }
 
 #btn:hover{
@@ -411,19 +386,11 @@ LOVE TIMER
 ========================= */
 
 #loveTimer{
-
-margin-top:25px;
-
+margin-top:35px;
 font-size:24px;
-
-font-weight:bold;
-
 text-align:center;
-
-color:white;
-
-text-shadow:0 0 15px hotpink;
-
+color:#fff;
+text-shadow:0 0 12px hotpink;
 }
 
 /* =========================
