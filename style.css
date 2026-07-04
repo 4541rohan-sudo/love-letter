@@ -221,27 +221,31 @@ position:absolute;
 
 left:50%;
 
-bottom:20px;
+top:-30px;
 
 transform:translateX(-50%);
 
-width:92%;
+width:500px;
+
+max-width:92vw;
 
 height:0;
 
-overflow:hidden;
+max-height:82vh;
 
-background:white;
+overflow-y:auto;
+
+background:#fffdf7;
 
 color:#222;
 
-border-radius:12px;
+border-radius:20px;
 
-padding:0 25px;
+padding:0 35px;
+
+box-shadow:0 25px 70px rgba(0,0,0,.45);
 
 transition:1.2s;
-
-box-shadow:0 20px 60px rgba(0,0,0,.5);
 
 z-index:100;
 
