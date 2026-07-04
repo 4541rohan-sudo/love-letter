@@ -35,7 +35,7 @@ heart.addEventListener("click", () => {
     // Move envelope down
     setTimeout(() => {
 
-        envelope.style.transform = "translateY(180px)";
+        envelope.style.transform = "translateY(260px)";
         envelope.style.opacity = ".25";
 
     },600);
@@ -43,7 +43,7 @@ heart.addEventListener("click", () => {
     // Show full letter
     setTimeout(() => {
 
-        letter.style.height = "80vh";
+        letter.style.height = "75vh";
         letter.style.padding = "25px";
 
     },500);
