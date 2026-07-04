@@ -225,6 +225,7 @@ max-width:90vw;
 height:0;
 max-height:85vh;
 overflow-y:auto;
+padding-bottom:220px;
 background:#fffdf7;
 color:#222;
 border-radius:25px;
@@ -334,17 +335,16 @@ BUTTON
 ========================= */
 
 #btn{
-
-#btn{
 display:none;
-margin-top:20px;
-padding:18px 40px;
+margin:20px auto 0;
+padding:18px 45px;
 font-size:20px;
 border:none;
 border-radius:50px;
 background:linear-gradient(45deg,#ff0066,#ff5ca8);
 color:#fff;
 cursor:pointer;
+box-shadow:0 0 25px hotpink;
 }
 
 #btn:hover{
@@ -360,25 +360,19 @@ FINAL TEXT
 ========================= */
 
 #final{
-
 display:none;
-
-margin-top:35px;
-
-font-size:50px;
-
-font-family:'Great Vibes',cursive;
-
+margin:25px auto 40px;
 text-align:center;
-
-background:linear-gradient(90deg,#ff0080,#ffd700);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-animation:titleGlow 2s infinite alternate;
-
+font-size:42px;
+font-family:'Great Vibes',cursive;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+padding:20px;
+border-radius:18px;
+width:650px;
+max-width:90%;
+color:#fff;
+box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 
 /* =========================
@@ -386,11 +380,20 @@ LOVE TIMER
 ========================= */
 
 #loveTimer{
-margin-top:35px;
-font-size:24px;
+display:block;
+width:650px;
+max-width:90%;
+margin:30px auto 0;
+padding:20px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+border:2px solid rgba(255,255,255,.25);
+border-radius:18px;
 text-align:center;
+font-size:24px;
+font-weight:bold;
 color:#fff;
-text-shadow:0 0 12px hotpink;
+box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 
 /* =========================
