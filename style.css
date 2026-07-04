@@ -380,20 +380,27 @@ LOVE TIMER
 ========================= */
 
 #loveTimer{
-display:block;
-width:650px;
-max-width:90%;
-margin:30px auto 0;
-padding:20px;
-background:rgba(255,255,255,.15);
-backdrop-filter:blur(12px);
-border:2px solid rgba(255,255,255,.25);
-border-radius:18px;
-text-align:center;
+
+margin-top:25px;
+
 font-size:24px;
+
 font-weight:bold;
-color:#fff;
-box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+text-align:center;
+
+color:#ff0000;
+
+text-shadow:0 0 12px #ff4d4d;
+
+background:rgba(255,255,255,0.85);
+
+padding:10px 20px;
+
+border-radius:15px;
+
+display:inline-block;
+
 }
 
 /* =========================
