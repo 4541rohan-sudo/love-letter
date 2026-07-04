@@ -1,4 +1,6 @@
-/* ===== RESET ===== */
+/* =========================
+   RESET
+========================= */
 
 *{
 margin:0;
@@ -7,87 +9,69 @@ box-sizing:border-box;
 }
 
 body{
+
 font-family:'Hind Siliguri',sans-serif;
+
 background:#050505;
+
 overflow-x:hidden;
-color:#fff;
+
+color:white;
+
 min-height:100vh;
+
 }
 
-/* ===== Animated Background ===== */
+/* =========================
+BACKGROUND
+========================= */
 
-.background{
+.bg{
+
 position:fixed;
-width:100%;
-height:100%;
-top:0;
+
 left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
 background:
 radial-gradient(circle at top,#ff008055,transparent 60%),
 radial-gradient(circle at bottom,#6a00ff33,transparent 60%),
-#050505;
+linear-gradient(180deg,#040404,#090909,#000);
+
 z-index:-10;
-overflow:hidden;
-}
-
-/* Floating Hearts */
-
-.background::before{
-content:"❤️ 💖 💕 💗 💘 💝";
-position:absolute;
-font-size:25px;
-width:100%;
-height:100%;
-animation:heartFloat 25s linear infinite;
-opacity:.2;
-white-space:pre-wrap;
-line-height:120px;
-}
-
-@keyframes heartFloat{
-
-0%{
-transform:translateY(100%);
-}
-
-100%{
-transform:translateY(-120%);
-}
 
 }
 
-/* ===== Container ===== */
-
-.container{
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-height:100vh;
-
-}
-
-/* ===== Title ===== */
+/* =========================
+TITLE
+========================= */
 
 .title{
 
-font-size:40px;
+text-align:center;
+
+margin-top:40px;
+
+font-size:55px;
+
 font-family:'Great Vibes',cursive;
 
-background:linear-gradient(90deg,#ff4fa2,#ffd700);
+background:linear-gradient(90deg,#ff3d81,#ffd700);
 
 -webkit-background-clip:text;
 
 -webkit-text-fill-color:transparent;
 
-margin-bottom:40px;
-
-animation:glow 2s infinite alternate;
+animation:titleGlow 2s infinite alternate;
 
 }
 
-@keyframes glow{
+@keyframes titleGlow{
 
 from{
 
@@ -103,21 +87,43 @@ filter:drop-shadow(0 0 30px deeppink);
 
 }
 
-/* ===== Envelope ===== */
+/* =========================
+CENTER
+========================= */
+
+.wrapper{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+}
+
+/* =========================
+ENVELOPE
+========================= */
 
 .envelope{
 
 position:relative;
 
-width:340px;
+width:360px;
 
-height:220px;
+height:240px;
 
-cursor:pointer;
+margin-top:40px;
 
-transition:.8s;
+transition:1s;
 
 }
+
+/* FRONT */
 
 .front{
 
@@ -127,25 +133,31 @@ bottom:0;
 
 width:100%;
 
-height:140px;
+height:170px;
 
 background:#f5e7d2;
 
 clip-path:polygon(0 0,100% 0,50% 100%);
 
-z-index:4;
+z-index:5;
+
+border-radius:0 0 12px 12px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.4);
 
 }
 
-.top{
+/* TOP */
+
+.lid{
 
 position:absolute;
 
 width:100%;
 
-height:140px;
+height:170px;
 
-background:#ebd4b5;
+background:#edd6ba;
 
 clip-path:polygon(0 100%,50% 0,100% 100%);
 
@@ -153,11 +165,11 @@ transform-origin:top;
 
 transition:1s;
 
-z-index:5;
+z-index:20;
 
 }
 
-/* Heart */
+/* HEART */
 
 .heart{
 
@@ -165,17 +177,17 @@ position:absolute;
 
 left:50%;
 
-top:90px;
+top:100px;
 
 transform:translateX(-50%);
 
-font-size:45px;
+font-size:50px;
 
-z-index:20;
+cursor:pointer;
 
 animation:pulse 1.5s infinite;
 
-cursor:pointer;
+z-index:30;
 
 }
 
@@ -189,7 +201,7 @@ transform:translateX(-50%) scale(1);
 
 50%{
 
-transform:translateX(-50%) scale(1.15);
+transform:translateX(-50%) scale(1.2);
 
 }
 
@@ -201,7 +213,7 @@ transform:translateX(-50%) scale(1);
 
 }
 
-/* Letter */
+/* LETTER */
 
 .letter{
 
@@ -209,7 +221,7 @@ position:absolute;
 
 left:50%;
 
-bottom:15px;
+bottom:20px;
 
 transform:translateX(-50%);
 
@@ -219,37 +231,48 @@ height:0;
 
 overflow:hidden;
 
-background:#fffdf7;
+background:white;
+
+color:#222;
 
 border-radius:12px;
 
 padding:0 25px;
 
-color:#222;
+transition:1.2s;
 
-transition:1s;
+box-shadow:0 20px 60px rgba(0,0,0,.5);
 
-box-shadow:0 20px 40px rgba(0,0,0,.5);
-
-z-index:50;
+z-index:100;
 
 }
+/* =========================
+LETTER CONTENT
+========================= */
 
 .letter h2{
 
-margin-top:25px;
+margin-top:30px;
+
+text-align:center;
+
+font-size:34px;
 
 color:#ff2d75;
+
+font-family:'Great Vibes',cursive;
 
 }
 
 .letter p{
 
-margin-top:18px;
-
-line-height:32px;
+margin-top:20px;
 
 font-size:18px;
+
+line-height:34px;
+
+text-align:justify;
 
 }
 
@@ -259,33 +282,51 @@ margin-top:30px;
 
 text-align:center;
 
+font-size:28px;
+
 color:#ff0055;
+
+font-family:'Great Vibes',cursive;
 
 }
 
 .letter h4{
 
-margin-top:35px;
+margin-top:40px;
 
 text-align:right;
 
+font-size:22px;
+
+color:#ff2d75;
+
 }
 
-/* Side Love */
+/* =========================
+SIDE TEXT
+========================= */
 
-.sideText{
+.side{
 
 position:fixed;
 
-right:80px;
+right:60px;
 
 top:50%;
 
 transform:translateY(-50%);
 
-font-family:'Great Vibes',cursive;
+display:none;
 
-font-size:55px;
+z-index:1000;
+
+}
+
+.side h1{
+
+font-size:60px;
+
+font-family:'Great Vibes',cursive;
 
 background:linear-gradient(90deg,#ff0080,#ffd700);
 
@@ -293,178 +334,117 @@ background:linear-gradient(90deg,#ff0080,#ffd700);
 
 -webkit-text-fill-color:transparent;
 
-display:none;
-
-animation:loveGlow 2s infinite alternate;
+animation:sideGlow 2s infinite alternate;
 
 }
 
-@keyframes loveGlow{
+@keyframes sideGlow{
 
 from{
 
-filter:drop-shadow(0 0 15px hotpink);
+filter:drop-shadow(0 0 10px hotpink);
 
 }
 
 to{
 
-filter:drop-shadow(0 0 40px red);
+filter:drop-shadow(0 0 35px deeppink);
 
 }
-  /* ========= BUTTON ========= */
 
-#loveBtn{
+}
 
-margin-top:50px;
+/* =========================
+BUTTON
+========================= */
 
-padding:18px 45px;
+#btn{
 
-font-size:22px;
+display:none;
+
+margin-top:35px;
+
+padding:18px 40px;
+
+font-size:20px;
 
 border:none;
 
 border-radius:50px;
 
-cursor:pointer;
+background:linear-gradient(45deg,#ff0066,#ff5ca8);
 
 color:white;
 
-background:linear-gradient(45deg,#ff006a,#ff4da6);
+cursor:pointer;
 
-box-shadow:0 0 30px #ff2d75;
+box-shadow:0 0 30px hotpink;
 
 transition:.4s;
 
+}
+
+#btn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 50px deeppink;
+
+}
+
+/* =========================
+FINAL TEXT
+========================= */
+
+#final{
+
 display:none;
 
-}
+margin-top:35px;
 
-#loveBtn:hover{
-
-transform:scale(1.1);
-
-box-shadow:0 0 60px hotpink;
-
-}
-
-/* ========= FINAL MESSAGE ========= */
-
-#finalMessage{
-
-margin-top:50px;
-
-font-size:55px;
+font-size:50px;
 
 font-family:'Great Vibes',cursive;
 
-background:linear-gradient(90deg,#ff0080,#ffd700,#ff0080);
+text-align:center;
+
+background:linear-gradient(90deg,#ff0080,#ffd700);
 
 -webkit-background-clip:text;
 
 -webkit-text-fill-color:transparent;
 
-display:none;
+animation:titleGlow 2s infinite alternate;
 
-animation:glowText 2s infinite alternate;
+}
+
+/* =========================
+LOVE TIMER
+========================= */
+
+#loveTimer{
+
+margin-top:25px;
+
+font-size:24px;
+
+font-weight:bold;
 
 text-align:center;
 
-}
+color:white;
 
-@keyframes glowText{
-
-from{
-
-filter:drop-shadow(0 0 15px deeppink);
+text-shadow:0 0 15px hotpink;
 
 }
 
-to{
-
-filter:drop-shadow(0 0 40px gold);
-
-}
-
-}
-
-/* ========= FLOATING EMOJI ========= */
-
-.emoji{
-
-position:fixed;
-
-font-size:28px;
-
-pointer-events:none;
-
-animation:emojiFly linear forwards;
-
-z-index:999;
-
-}
-
-@keyframes emojiFly{
-
-0%{
-
-opacity:0;
-
-transform:translateY(0) scale(.5);
-
-}
-
-20%{
-
-opacity:1;
-
-}
-
-100%{
-
-opacity:0;
-
-transform:translateY(-110vh) rotate(360deg) scale(1.4);
-
-}
-
-}
-
-/* ========= HEART RAIN ========= */
-
-.rainHeart{
-
-position:fixed;
-
-top:-40px;
-
-font-size:30px;
-
-animation:rain 6s linear forwards;
-
-pointer-events:none;
-
-z-index:999;
-
-}
-
-@keyframes rain{
-
-100%{
-
-transform:translateY(120vh);
-
-opacity:0;
-
-}
-
-}
-
-/* ========= RESPONSIVE ========= */
+/* =========================
+RESPONSIVE
+========================= */
 
 @media(max-width:900px){
 
-.sideText{
+.side{
 
 position:relative;
 
@@ -478,37 +458,35 @@ margin-top:40px;
 
 text-align:center;
 
-font-size:40px;
+}
+
+.side h1{
+
+font-size:42px;
 
 }
 
 .title{
 
-font-size:28px;
+font-size:38px;
 
 }
 
 .envelope{
 
-width:280px;
+width:300px;
 
-height:190px;
-
-}
-
-.letter{
-
-width:95%;
+height:220px;
 
 }
 
 }
 
-@media(max-width:500px){
+@media(max-width:600px){
 
 .title{
 
-font-size:22px;
+font-size:28px;
 
 padding:10px;
 
@@ -516,33 +494,37 @@ padding:10px;
 
 .letter{
 
-font-size:15px;
+width:96%;
 
-padding:20px;
+padding:0 18px;
 
 }
 
 .letter p{
 
-font-size:15px;
+font-size:16px;
 
-line-height:28px;
+line-height:30px;
 
 }
 
-#loveBtn{
+.side h1{
+
+font-size:34px;
+
+}
+
+#btn{
+
+width:90%;
 
 font-size:18px;
 
-padding:15px 30px;
-
 }
 
-#finalMessage{
+#final{
 
-font-size:35px;
-
-}
+font-size:34px;
 
 }
 
