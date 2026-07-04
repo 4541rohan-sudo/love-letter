@@ -43,7 +43,7 @@ heart.addEventListener("click", () => {
     // Show full letter
     setTimeout(() => {
 
-        letter.style.height = "850px";
+        letter.style.height = "80vh";
         letter.style.padding = "25px";
 
     },500);
